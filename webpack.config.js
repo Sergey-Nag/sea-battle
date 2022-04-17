@@ -1,10 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+module.exports = (_, {mode})=> ({
   entry: './src/entry.ts',
   mode: 'development',
-  devtool: 'inline-source-map',
+  devtool: mode === 'development' && 'inline-source-map',
   module: {
     rules: [
       {
@@ -37,5 +37,5 @@ module.exports = {
       template: 'src/html/index.html',
     })
   ],
-  watch: true,
-};
+  watch: mode === 'development'
+});

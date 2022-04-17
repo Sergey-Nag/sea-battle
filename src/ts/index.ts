@@ -15,7 +15,6 @@ const player = new Player('Serg', true, map);
 const opponent = new AIPlayer('AI', oponentMap);
 const game = new Game([player, opponent], gameElement);
 
-
 // const generatedMap = new GameMap([...cells as any]);
 // const generatetPlayer = new AIPlayer('map', generatedMap);
 
@@ -36,14 +35,7 @@ gameEvents.on({
     }
   },
   move: {
-    onCells: (cells) => {
-      // console.log(cells);
-      
-      return [];
-    },
     offCells: ([cell]) => {
-      // console.log(cell);
-      
       player.attack(cell);
     }
   },

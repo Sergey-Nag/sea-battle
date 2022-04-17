@@ -11,7 +11,7 @@ const cells = table.querySelectorAll<HTMLTableCellElement>('.cell');
 
 const map = new GameMap([...cells as any]);
 const oponentMap = new GameMap([...cells as any]);
-const player = new Player('Serg', true, map);
+const player = new Player('You', true, map);
 const opponent = new AIPlayer('AI', oponentMap);
 const game = new Game([player, opponent], gameElement);
 

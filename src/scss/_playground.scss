@@ -1,0 +1,36 @@
+@import './variables', './mixins';
+
+.playground {
+  width: auto;
+
+  th {
+    @extend %cell;
+  }
+
+  td {
+    @extend %cell;
+  }
+
+  &.aim {
+    td {
+      &:hover {
+        background-color: $cell-hover;
+      }
+      &:active {
+        background-color: $cell-active;
+      }
+    }
+  }
+
+  tbody {
+    counter-reset: rowCounter;
+
+    th {
+      counter-increment: rowCounter;
+
+      &::before {
+        content: counter(rowCounter);
+      }
+    }
+  }
+}

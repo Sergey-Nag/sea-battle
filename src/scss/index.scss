@@ -1,0 +1,8 @@
+@import "~bootstrap/scss/bootstrap";
+@import './playground';
+@import './cell';
+@import './info';
+
+.game-container {
+  padding-top: 1em;
+}

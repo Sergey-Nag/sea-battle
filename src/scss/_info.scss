@@ -1,0 +1,16 @@
+.info {
+  width: 220px;
+  .state {
+    text-transform: capitalize;
+
+  }
+
+  .history {
+    &-wrapp {
+      font-size: .8em;
+      height: 70vh;
+      width: 100%;
+      overflow-y: auto;
+    }
+  }
+}

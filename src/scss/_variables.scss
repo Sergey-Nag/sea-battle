@@ -1,0 +1,9 @@
+$cell-size: 64px;
+
+$bg-white-05: rgba(255, 255, 255, .5);
+$cell-bg: linear-gradient(0, $bg-white-05, $bg-white-05);
+$cell-ship: var(--bs-gray-800);
+$cell-hover: var(--bs-gray-200);
+$cell-active: var(--bs-gray-300);
+
+$grey: var(--bs-gray-500);

@@ -67,8 +67,8 @@ export default class GameMap {
     this.defenceMap = [...this.map].map((cell) => {
       const newCell = Cell.copy(cell);
       newCell.shot = false;
-
-      if (cell.state === 'ship') newCell.state = 'ship';
+      
+      newCell.state = cell.state === 'ship' ? 'ship' : null;
       
       return newCell;
     });

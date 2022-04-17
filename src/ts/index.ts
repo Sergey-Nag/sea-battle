@@ -10,16 +10,18 @@ const table = document.querySelector<HTMLTableElement>('#playground');
 const cells = table.querySelectorAll<HTMLTableCellElement>('.cell');
 
 const map = new GameMap([...cells as any]);
-const oponentMap = new GameMap([...cells as any]);
+const opponentMap = new GameMap([...cells as any]);
 const player = new Player('You', true, map);
-const opponent = new AIPlayer('AI', oponentMap);
+const opponent = new AIPlayer('AI', opponentMap);
 const game = new Game([player, opponent], gameElement);
 
+// -- auto generate map
 // const generatedMap = new GameMap([...cells as any]);
 // const generatetPlayer = new AIPlayer('map', generatedMap);
-
 // player.map = generatetPlayer.map;
 // player.map.setDefenceMap();
+
+// -- show opponent map
 // player.map.setAttackMap(opponent.map.map)
 
 const gameEvents = new GameEvents(gameElement, game);

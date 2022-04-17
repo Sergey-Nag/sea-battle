@@ -1,6 +1,5 @@
-import { random, values } from "lodash";
+import { random } from "lodash";
 import { PLAYGROUND } from "../constants/playground";
-import IGame, { GameState } from "ts/interfaces/Game.interface";
 import IRenderer from "ts/interfaces/Renderer.interface";
 import AIPlayer from "./AIPlayer";
 import Cell from "./Cell";
@@ -9,6 +8,7 @@ import GameMap, { AvailableShips, ShipsKeys } from "./GameMap";
 import Player from "./Player";
 import Template from "./Template";
 import { Modal } from 'bootstrap';
+import { GameState } from "./Game.types";
 
 export default class Game implements IRenderer {
   private event: EventEmmiter;

@@ -42,12 +42,7 @@ gameEvents.on({
 });
 
 game.start();
-document.querySelector('#ready').addEventListener('click', (e) => {
-  
-  if (game.state === 'edit') game.move();
-  else if (game.state === 'move') game.wait();
-  else game.edit();
-});
+
 document.querySelector('#reloadPage').addEventListener('click', (e) => {
   window.location.reload();
 });

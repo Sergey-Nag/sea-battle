@@ -22,7 +22,7 @@ export default class AIPlayer extends Player {
     const [col, row] = this.getRandomColRow();
     let cell = cells.find((c) => c.col === col && c.row === row);
 
-    if (!cell){
+    if (!cell || this.attackedCells.some((c) => c.col === col && c.row === row)){
       return this.aim(cells);
     }
 

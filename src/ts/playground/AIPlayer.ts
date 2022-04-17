@@ -67,6 +67,7 @@ export default class AIPlayer extends Player {
 
     } catch (e) {
       console.info(e);
+      this.generateShipsMap();
     }
   }
 
